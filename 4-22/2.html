@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    window.onload = function(){
+      var box = document.getElementById('box');
+      $a = '';
+      $.ajax({
+        url:'https://5adc7419b80f490014fb8828.mockapi.io/star',
+        methods:'get',
+        data:{},
+        success:function(data){
+          for(var i=0;i<data.length;i++){
+            // var li = document.createElement('li');
+            // li.innerHTML = data[i].id;
+            // box.append(li);
+            $a = $a + '<li>'+data[i].name+'</li>';
+            // box.append();
+          }
+          $(box).html($a);
+        }
+      })
+    }
+    </script>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <ul id='box'>
+
+    </ul>
+  </body>
+</html>
