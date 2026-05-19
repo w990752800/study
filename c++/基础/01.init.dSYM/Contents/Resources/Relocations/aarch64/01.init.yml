@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/wnf/Documents/GitHub/study/c++/基础/01.init"
+relocations:     []
+...
