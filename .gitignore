@@ -1,0 +1,11 @@
+*.dSYM
+/target
+/build
+/coverage
+/.idea
+/.vscode
+/.DS_Store
+*.log
+*.tmp
+*.bak
+*.swp
