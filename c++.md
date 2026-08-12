@@ -223,3 +223,116 @@ int main() {
 
 
 ```
+
+12. 函数引用传参
+```c++
+#include <iostream>
+
+int swper_ref(int &x, int &y) {
+    int t = x;
+    x = y;
+    y = t;
+    return 0;
+}
+
+int main() {
+
+    int x = 10;
+    int y = 20;
+    swper_ref(x, y);
+
+    std::cout << x << " " << y << std::endl;
+    return 0;
+}
+```
+
+13. 函数重载
+```c++
+#include <iostream>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+std::string add(std::string &a, std::string &b) {
+    return a + b;
+}
+
+int main() {
+
+    std::string x = "hello ";
+
+    std::string y = "world";
+
+    std::string result = add(x,y);
+
+    return 0;
+}
+```
+
+14. 参数默认值
+```c++
+#include <iostream>
+
+int click(int x = 10) {
+    return x;
+}
+
+int main() {
+    int x = click();
+    std::cout << x << std::endl;
+    return 0;
+}
+
+```
+
+15. 类
+```c++
+#include <iostream>
+
+class Clock {
+
+    public:
+    int settime(int h = 0, int m = 0, int s = 0);
+    int showtime();
+    private:
+    int hour, minute, second;
+}
+
+int Clock::settime(int h, int m, int s) {
+    hour = h;
+    minute = m;
+    second = s;s
+    return 0;
+}
+
+int Clock::showtime() {
+    std::cout << hour << minute << second << std::endl;
+    return 0;
+}
+
+int main() {
+
+    Clock clock;
+    clock.settime();
+    clock.showtime();
+    return 0;
+
+}
+```
+
+16. 类构造函数
+<!-- TODO -->
+
+17. 类 copy构造函数
+<!-- TODO -->
+
+18. 析构函数
+<!-- 析构函数是在函数销毁时调用，为了销毁创建的变量 -->
+
+19. 类this指针
+<!-- 类this指针 -->
+
+20. 类静态属性
+<!-- static -->
+
